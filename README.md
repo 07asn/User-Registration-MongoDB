@@ -19,7 +19,7 @@
   Login, Register, Update, Delete.
 
 > **Note:**  
-> Ensure that you Implement .env file in the backend.
+> Ensure that you Implement .env file (MONGO_URI, JWT_SECRET, JWT_EXPIRE, PORT) in the backend.
 
 ## Installation
 
@@ -42,4 +42,3 @@ Below are some screenshots from the project:
 ![Preview ](https://drive.google.com/uc?export=view&id=1q1ti2u7xlouAt6UkTRSROqEGCCGq8tj5)
 ![Preview ](https://drive.google.com/uc?export=view&id=1YW6aA9Xw5mRzM5wcjoiJmqS6rPnk3UsL)
 ![Preview ](https://drive.google.com/uc?export=view&id=1ZDbP_1MYUXVIJ42St4VmRpV8qLtjYWKX)
-
