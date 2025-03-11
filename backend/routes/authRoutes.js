@@ -1,12 +1,10 @@
-const express = require("express");
-const jwt = require("jsonwebtoken");
-const User = require("../models/User");
-const bcrypt = require("bcryptjs");
-const router = express.Router();
+const express     = require("express");
+const jwt         = require("jsonwebtoken");
+const User        = require("../models/User");
+const router      = express.Router();
 const { protect } = require("../middleware/authMiddleware");
 
-
-// POST Register
+// POST - Register
 router.post("/register", async (req, res) => {
   const { username, email, password } = req.body;
   try {
@@ -26,7 +24,7 @@ router.post("/register", async (req, res) => {
 });
 
 
-// POST Login
+// POST - Login
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -53,7 +51,7 @@ router.post("/login", async (req, res) => {
 });
 
 
-// GET Profile
+// GET - User
 router.get("/profile", async (req, res) => {
   try {
     const token = req.cookies.token;
@@ -76,7 +74,7 @@ router.get("/profile", async (req, res) => {
 });
 
 
-// UPDATE Profile
+// UPDATE - User
 router.put("/update", protect, async (req, res) => {
     const { username, email } = req.body;
   
@@ -98,22 +96,22 @@ router.put("/update", protect, async (req, res) => {
   });
   
 
-  // DELETE Profile
+  // DELETE - User
   router.delete("/delete", protect, async (req, res) => {
     try {
 
-      const userId = req.user.id;
-      const user = await User.findByIdAndDelete(userId);
+          const userId = req.user.id;
+          const user = await User.findByIdAndDelete(userId);
   
-      if (!user) {
-        return res.status(404).json({ message: "User not found" });
-      }
+          if (!user) {
+            return res.status(404).json({ message: "User not found" });
+          }
   
-      res.json({ message: "Account deleted successfully" });
-    } catch (err) {
-      console.error(err);
-      res.status(500).json({ message: "Error deleting account" });
-    }
+          res.json({ message: "Account deleted successfully" });
+        } catch (err) {
+          console.error(err);
+          res.status(500).json({ message: "Error deleting account" });
+        }
   });
 
 module.exports = router;

@@ -1,14 +1,21 @@
 import { useState } from "react";
-import api from "../services/api";
+import api          from "../services/api";
 
 const Register = () => {
+
+      // ----------------------------------
+     // STATES
+    // ----------------------------------
     const [formData, setFormData] = useState({ username: "", email: "", password: "" });
-    const [message, setMessage] = useState("");
+    const [message,  setMessage]  = useState("");
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+      // ----------------------------------
+     // POST - Login
+    // ----------------------------------
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {

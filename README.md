@@ -35,10 +35,9 @@ nodemon server.js
 ```
 
 ## 🖼️ Preview  
-Below are some screenshots from the project:
+Below are some screenshots from the Task:
 
-### 📸 Preview  
+![Preview ](https://drive.google.com/uc?export=view&id=1gUFPxFu_3gWlNglP9rzLuHO1TTOhdger)
 ![Preview ](https://drive.google.com/uc?export=view&id=1RmrIhV2GVw5hY7J9_7bIXGPXMikCujtC)
 ![Preview ](https://drive.google.com/uc?export=view&id=1q1ti2u7xlouAt6UkTRSROqEGCCGq8tj5)
-![Preview ](https://drive.google.com/uc?export=view&id=1YW6aA9Xw5mRzM5wcjoiJmqS6rPnk3UsL)
 ![Preview ](https://drive.google.com/uc?export=view&id=1ZDbP_1MYUXVIJ42St4VmRpV8qLtjYWKX)
